@@ -2,7 +2,7 @@ import {Command} from "@ckeditor/ckeditor5-core";
 import { jsPDF } from "jspdf";
 import {pdfGeneratorDefaults} from "./pdfGeneratorDefaults";
 
-export default class DownloadPdfCommand extends Command {
+export default class ExportPdfCommand extends Command {
   constructor(editor) {
     super(editor);
   }

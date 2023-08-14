@@ -11,11 +11,12 @@ import Timestamp from './src/timestamp/timestamp';
 import Abbrevation from "./src/abbrevation/abbrevation";
 import CKEditorInspector from '@ckeditor/ckeditor5-inspector';
 import ShowPrintPreview from "./src/showprintpreview/showprintpreview";
+import ExportPdf from "./src/exportpdf/exportpdf";
 
 ClassicEditor
   .create(document.querySelector('#editor'), {
-    plugins: [Essentials, Paragraph, Heading, List, Bold, Italic, Timestamp, Abbrevation, ShowBlocks, ShowPrintPreview],
-    toolbar: ['heading', 'bold', 'italic', 'numberedList', 'bulletedList', 'timestamp', '|', 'abbreviation', 'showBlocks', 'showPrintPreview', 'downloadPdf'],
+    plugins: [Essentials, Paragraph, Heading, List, Bold, Italic, Timestamp, Abbrevation, ShowBlocks, ShowPrintPreview, ExportPdf],
+    toolbar: ['heading', 'bold', 'italic', 'numberedList', 'bulletedList', 'timestamp', '|', 'abbreviation', 'showBlocks', 'showPrintPreview', 'exportPdf'],
     pdf: {
       format: [794, 1123],
       orientation: "portrait",
