@@ -1,6 +1,8 @@
 import {Plugin} from "@ckeditor/ckeditor5-core";
 import {ButtonView} from "@ckeditor/ckeditor5-ui";
-import ShowPrintViewCommand from "./showprintviewcommand";
+import './styles.css';
+import printPreviewIcon from "./icons/printPreview.svg";
+import exportPdf from "./icons/exportPDF.svg";
 
 export default class ShowPrintViewUi extends Plugin {
   init() {
@@ -12,7 +14,7 @@ export default class ShowPrintViewUi extends Plugin {
       view.set({
         label: 'Show print button',
         tooltip: true,
-        withText: true,
+        icon: printPreviewIcon
       });
 
       view.bind('isOn').to(command);
@@ -32,8 +34,8 @@ export default class ShowPrintViewUi extends Plugin {
 
       view.set({
         label: 'Download PDF',
-        withText: true,
         tooltip: true,
+        icon: exportPdf,
       })
 
       this.listenTo(view, 'execute', () => {

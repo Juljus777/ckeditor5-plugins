@@ -1,0 +1,19 @@
+@media print {
+    .ck {
+        visibility: hidden;
+    }
+
+    .ck-content {
+        visibility: visible;
+        border: 0 !important;
+    }
+
+    .ck-editor__editable.ck-focused {
+        box-shadow: none !important;
+    }
+
+    .ck-label,
+    .ck-editor__top {
+        display: none !important;
+    }
+}
