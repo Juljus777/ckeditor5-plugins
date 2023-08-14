@@ -23,6 +23,7 @@ ClassicEditor
       unit: "px",
       xPadding: 20,
       yPadding: 40,
+      userControllableValues: true,
     }
   })
   .then(editor => {
