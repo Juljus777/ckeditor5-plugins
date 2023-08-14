@@ -15,7 +15,7 @@ import ShowPrintView from "./src/showprintview/showprintview";
 ClassicEditor
   .create(document.querySelector('#editor'), {
     plugins: [Essentials, Paragraph, Heading, List, Bold, Italic, Timestamp, Abbrevation, ShowBlocks, ShowPrintView],
-    toolbar: ['heading', 'bold', 'italic', 'numberedList', 'bulletedList', 'timestamp', '|', 'abbreviation', 'showBlocks', 'showPrintViewButton', 'downloadPdf', 'displayPrintPreview'],
+    toolbar: ['heading', 'bold', 'italic', 'numberedList', 'bulletedList', 'timestamp', '|', 'abbreviation', 'showBlocks', 'showPrintViewButton', 'downloadPdf'],
     pdf: {
       format: [700, 987],
       orientation: "portrait",

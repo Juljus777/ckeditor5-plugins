@@ -20,8 +20,8 @@ export default class ShowPrintViewUi extends Plugin {
       view.bind('isOn').to(command);
       view.bind('isEnabled').to(command);
 
-      this.listenTo(view, 'execute', () => {
-        editor.execute('showPrintView');
+      this.listenTo(view, 'execute', (event) => {
+        editor.execute('showPrintView', event.source.element);
         editor.editing.view.focus();
       })
 
@@ -41,24 +41,6 @@ export default class ShowPrintViewUi extends Plugin {
       this.listenTo(view, 'execute', () => {
         editor.execute('downloadPdf');
         editor.editing.view.focus();
-      })
-
-      return view;
-    })
-
-    editor.ui.componentFactory.add('displayPrintPreview', locale => {
-      const view = new ButtonView();
-      const command = editor.commands.get('displayPrintPreview'); // @TODO Button states
-
-      view.set({
-        label: 'Display print preview',
-        withText: true,
-        tooltip: true,
-      })
-
-      view.listenTo(view, 'execute', () => {
-        editor.execute('displayPrintPreview');
-        editor.editing.view.focus(); // @TODO Focus the actual preview element instead
       })
 
       return view;
