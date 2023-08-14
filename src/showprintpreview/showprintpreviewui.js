@@ -4,15 +4,15 @@ import './styles.css';
 import printPreviewIcon from "./icons/printPreview.svg";
 import exportPdf from "./icons/exportPDF.svg";
 
-export default class ShowPrintViewUi extends Plugin {
+export default class ShowPrintPreviewUi extends Plugin {
   init() {
     const {editor} = this;
-    editor.ui.componentFactory.add('showPrintViewButton', locale => {
+    editor.ui.componentFactory.add('showPrintPreview', locale => {
       const view = new ButtonView();
-      const command = editor.commands.get('showPrintView');
+      const command = editor.commands.get('showPrintPreview');
 
       view.set({
-        label: 'Show print button',
+        label: 'Show print preview',
         tooltip: true,
         icon: printPreviewIcon
       });
@@ -21,7 +21,7 @@ export default class ShowPrintViewUi extends Plugin {
       view.bind('isEnabled').to(command);
 
       this.listenTo(view, 'execute', (event) => {
-        editor.execute('showPrintView', event.source.element);
+        editor.execute('showPrintPreview', event.source.element);
         editor.editing.view.focus();
       })
 

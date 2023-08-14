@@ -10,18 +10,18 @@ import {ShowBlocks} from '@ckeditor/ckeditor5-show-blocks';
 import Timestamp from './src/timestamp/timestamp';
 import Abbrevation from "./src/abbrevation/abbrevation";
 import CKEditorInspector from '@ckeditor/ckeditor5-inspector';
-import ShowPrintView from "./src/showprintview/showprintview";
+import ShowPrintPreview from "./src/showprintpreview/showprintpreview";
 
 ClassicEditor
   .create(document.querySelector('#editor'), {
-    plugins: [Essentials, Paragraph, Heading, List, Bold, Italic, Timestamp, Abbrevation, ShowBlocks, ShowPrintView],
-    toolbar: ['heading', 'bold', 'italic', 'numberedList', 'bulletedList', 'timestamp', '|', 'abbreviation', 'showBlocks', 'showPrintViewButton', 'downloadPdf'],
+    plugins: [Essentials, Paragraph, Heading, List, Bold, Italic, Timestamp, Abbrevation, ShowBlocks, ShowPrintPreview],
+    toolbar: ['heading', 'bold', 'italic', 'numberedList', 'bulletedList', 'timestamp', '|', 'abbreviation', 'showBlocks', 'showPrintPreview', 'downloadPdf'],
     pdf: {
-      format: [700, 987],
+      format: [794, 1123],
       orientation: "portrait",
       unit: "px",
-      xPadding: 30,
-      yPadding: 50,
+      xPadding: 20,
+      yPadding: 40,
     }
   })
   .then(editor => {
